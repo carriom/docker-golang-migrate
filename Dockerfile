@@ -1,6 +1,6 @@
 FROM golang:1.10-alpine3.7 AS build
 
-ENV VERSION v3.2.0
+ENV VERSION v3.3.0
 
 RUN apk add --no-cache git
 
