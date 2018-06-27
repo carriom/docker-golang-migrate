@@ -10,6 +10,7 @@ RUN go get -v -d github.com/golang-migrate/migrate/cli \
 WORKDIR /go/src/github.com/golang-migrate/migrate
 
 RUN git checkout ${VERSION} \
+    && go get -u github.com/go-sql-driver/mysql \
     && go build -tags 'mysql' -o ./bin/migrate ./cli
 
 FROM alpine:3.7
